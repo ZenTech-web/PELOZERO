@@ -1,12 +1,38 @@
-# React + Vite
+# 🪞 Pelo Zero - Landing Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Uma landing page moderna, performática e elegante desenvolvida para a **Pelo Zero**, especialista em depilação e design de sobrancelhas. O foco do projeto é proporcionar uma experiência de agendamento fluida e uma interface que transmite higiene, cuidado e profissionalismo.
 
-Currently, two official plugins are available:
+Projeto desenvolvido pela **Zentech** 🚀
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Tecnologias Utilizadas
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Este projeto utiliza o que há de mais moderno no ecossistema Front-end para garantir velocidade e manutenibilidade:
+
+- **React** (Biblioteca principal)
+- **Vite** (Build tool ultrarrápida)
+- **Tailwind CSS v4** (Estilização baseada em utilitários de última geração)
+- **React Router Dom** (Gerenciamento de rotas e 404 personalizado)
+- **ESLint** (Padronização e qualidade de código)
+- **Mobile-First** (Arquitetura de design pensada primeiro em dispositivos móveis)
+
+---
+
+## ✨ Funcionalidades
+
+- [x] **Design Responsivo:** Adaptado para smartphones, tablets e desktops.
+- [x] **Seção de Serviços:** Exibição clara dos procedimentos de depilação e sobrancelhas.
+- [x] **CTAs Estratégicos:** Botões de conversão direta para agendamento via WhatsApp.
+- [x] **Página de Erro 404:** Roteamento tratado para manter o usuário dentro da aplicação (configurado para Vercel).
+- [x] **Performance Otimizada:** Imagens leves e carregamento instantâneo graças ao Vite.
+
+---
+
+## 🚀 Como rodar o projeto localmente
+
+Para explorar o código ou fazer modificações, siga os passos abaixo:
+
+1. **Clone o repositório:**
+   ```bash
+   git clone [https://github.com/seu-usuario/pelo-zero-landingpage.git](https://github.com/seu-usuario/pelo-zero-landingpage.git)
