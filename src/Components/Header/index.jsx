@@ -21,11 +21,11 @@ const Header = () => {
             valor="Pelo Zero"
             />
             
-            <button onClick={isMenuOpen} className={"text-white cursor-pointer transition-colors hover:text-gold active:text-gold md:hidden"}>
+            <button onClick={isMenuOpen} className={"text-white cursor-pointer transition-colors hover:text-gold active:text-gold sm:hidden"}>
              {valor ? <FaTimes size={20}/> : <FaBars  size={20} />}
             </button>
 
-            <ul className="hidden text-white text-[12px] gap-5 uppercase md:flex">
+            <ul className="hidden text-white text-[12px] gap-5 uppercase sm:flex">
                 <li className="hover:text-gold-light cursor-pointer">serviços</li>
                 <li className="hover:text-gold-light cursor-pointer">preços</li>
                 <li className="hover:text-gold-light cursor-pointer">sobre</li>
@@ -36,7 +36,7 @@ const Header = () => {
 
         </header>
 
-        <section className={`bg-dark-2 w-full border border-t-white py-2 px-6 absolute transition-all duration-300 ease-in-out origin-top left-0 md:hidden ${valor ? "opacity-100 scale-y-100 pointer-events-auto" : "opacity-0 scale-y-0 pointer-events-none"}`}>
+        <section className={`bg-dark-2 w-full border border-t-white py-2 px-6 absolute transition-all duration-300 ease-in-out origin-top left-0 sm:hidden ${valor ? "opacity-100 scale-y-100 pointer-events-auto" : "opacity-0 scale-y-0 pointer-events-none"}`}>
           <ul className="text-white text-[12px] font-body uppercase flex flex-col gap-1.5">
             <li className="hover:text-gold-light cursor-pointer">serviços</li>
             <li className="hover:text-gold-light cursor-pointer">preços</li>
