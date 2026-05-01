@@ -9,8 +9,18 @@
   --color-gold-light: #f0d080;
   --color-dark: #0a0a0a;
   --color-dark-2: #080808;
+
+  --background-image-hero: 
+    radial-gradient(ellipse at 30% 60%, rgba(201,168,76,0.08) 0%, transparent 55%),
+    radial-gradient(ellipse at 70% 30%, rgba(201,168,76,0.05) 0%, transparent 45%),
+    linear-gradient(160deg, #111111, #0a0a0a, #0d0d0d);
+
+  --background-image-gold-shine: linear-gradient(135deg, rgb(201, 168, 76), rgb(240, 208, 128), rgb(201, 168, 76));  
 }
 
 body, #root {
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: black;
 }

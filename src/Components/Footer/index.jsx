@@ -1,9 +1,9 @@
 import P from "../P"
 
-const Footer = () => {
+const Footer = ({openValue}) => {
     return (
 
-       <footer className="bg-dark w-full bottom-0 top-auto fixed">
+       <footer className={`bg-dark w-full bottom-0 mt-auto ${openValue ? "hidden" : ""}`}>
 
            <section className="flex flex-col py-7 px-6 justify-between items-center max-w-6xl mx-auto">
 
