@@ -150,6 +150,14 @@ const Main = () => {
 
         </section>
 
+        <section className="mx-auto my-5 border border-gold/40 w-87.5 p-6 flex flex-col gap-1 bg-hero">
+           <P className="uppercase text-gold text-[12px]" valor="Nossas unidades"/>
+           <P className="text-white text-[10px]" valor="Cruzes—Travessa Coronel Melinho, S/N" />
+           <P className="text-white text-[10px]" valor="Panelas — Rua Manoel Benigno, 31 – Centro"/>
+        </section>
+
+
+
         </main>
       </>
     )

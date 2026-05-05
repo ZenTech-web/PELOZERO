@@ -35,7 +35,7 @@ const Footer = ({openValue}) => {
 
             </div>
             
-            <div className="w-full mt-3 border border-t-gray-400 text-center text-[10px]">
+            <div className="w-full mt-3 border-t-2 border-gray-300 text-center text-[10px]">
                <P 
                className="text-gray-400 mt-2"
                valor="&copy; 2026 Pelo Zero - Depilação & Estética"
