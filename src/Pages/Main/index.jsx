@@ -156,7 +156,15 @@ const Main = () => {
            <P className="text-white text-[10px]" valor="Panelas — Rua Manoel Benigno, 31 – Centro"/>
         </section>
 
+        <section className="border border-gold/40 w-87.5 mx-auto bg-hero py-6 px-5 flex flex-col gap-2">
+          <div className="flex items-center ">
+            <P className=" text-white text-[15px] font-elegant italic" valor='"Acreditamos que toda mulher merece se sentir bonita e cuidada. Beleza é confiança, e confiança começa aqui."'/>
+          </div>
+          <Line/>
+         <P className="uppercase text-gold text-[9px] font-body" valor="Gerusa & Edselma — Pelo Zero"/>
+        </section>
 
+        
 
         </main>
       </>
