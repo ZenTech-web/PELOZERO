@@ -62,6 +62,13 @@ const Data = [
         ]
     }
         ]
+    },
+    {
+      evaluated: [
+        {src: Logosimbolo, alt: "Simbolo de estrela gold", avaliacao: "Mais procurado da região"},
+        {src: Logosimbolo, alt: "Simbolo de estrela gold", avaliacao: "Avaliações dos clientes", numero:"5"},
+        {avaliacao: "Dedicação em cada visita", numero:"100%"}
+      ]
     }
 
 ]

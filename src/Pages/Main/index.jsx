@@ -1,5 +1,6 @@
 import { useOutletContext } from "react-router-dom";
 import Bnt from "../../Components/Bnt"
+import Button from "../../Components/Button"
 import P from "../../Components/P"
 import Pborder from "../../Components/Pborder"
 import Data from "../../Data/Data";
@@ -13,9 +14,17 @@ const Main = () => {
    const imagem = Data.find((e) => e.Banner).Banner
    const dados = Data.find((e) => e.Service).Service
    const dadosPrices = Data.find((e) => e.Prices).Prices
+   const evaluated = Data.find((e) => e.evaluated).evaluated
 
    function runZap(){
      const phoneNumber = "5581997203677";
+     const message = encodeURIComponent("Olá! Gostaria de agendar um horário no Pelo Zero.");
+     const url = `https://wa.me/${phoneNumber}?text=${message}`;
+     window.open(url, "_blank");
+   }
+
+   function runZap1(){
+     const phoneNumber = "5581996373606";
      const message = encodeURIComponent("Olá! Gostaria de agendar um horário no Pelo Zero.");
      const url = `https://wa.me/${phoneNumber}?text=${message}`;
      window.open(url, "_blank");
@@ -99,7 +108,7 @@ const Main = () => {
   
              <Pborder valor="Tabela de valores"/>
 
-             <H2 valor="Nossos" span="Serviços"/>
+             <H2 valor="Nossos" span="Preços"/>
 
              <Line/>
              
@@ -151,21 +160,67 @@ const Main = () => {
         </section>
 
         <section className="mx-auto my-5 border border-gold/40 w-87.5 p-6 flex flex-col gap-1 bg-hero">
-           <P className="uppercase text-gold text-[12px]" valor="Nossas unidades"/>
-           <P className="text-white text-[10px]" valor="Cruzes—Travessa Coronel Melinho, S/N" />
-           <P className="text-white text-[10px]" valor="Panelas — Rua Manoel Benigno, 31 – Centro"/>
+           <P className="uppercase text-gold text-[12px] md:text-[15px]" valor="Nossas unidades"/>
+           <P className="text-white text-[10px] md:text-[12px]" valor="Cruzes—Travessa Coronel Melinho, S/N" />
+           <P className="text-white text-[10px] md:text-[12px]" valor="Panelas — Rua Manoel Benigno, 31 – Centro"/>
         </section>
 
-        <section className="border border-gold/40 w-87.5 mx-auto bg-hero py-6 px-5 flex flex-col gap-2">
+        <section className="border border-gold/40 w-87.5 mx-auto bg-hero py-6 px-5 flex flex-col gap-2 md:py-8">
           <div className="flex items-center ">
-            <P className=" text-white text-[15px] font-elegant italic" valor='"Acreditamos que toda mulher merece se sentir bonita e cuidada. Beleza é confiança, e confiança começa aqui."'/>
+            <P className=" text-white text-[15px] font-elegant italic md:text-[18px]" valor='"Acreditamos que toda mulher merece se sentir bonita e cuidada. Beleza é confiança, e confiança começa aqui."'/>
           </div>
           <Line/>
-         <P className="uppercase text-gold text-[9px] font-body" valor="Gerusa & Edselma — Pelo Zero"/>
+         <P className="uppercase text-gold text-[9px] font-body md:text-[12px]" valor="Gerusa & Edselma — Pelo Zero"/>
         </section>
+       
+         <section className="flex flex-wrap gap-2 justify-center mt-5">
+          {evaluated.map(({src, alt, avaliacao, numero}, index) => (
+            <div key={index} className="flex flex-col items-center gap-1 border border-gold/40 p-2 bg-hero w-28">
+              
+              <div className="flex gap-0.5 items-center justify-center">
+              <span className="text-gold font-bold text-sm">{numero}</span>
+              <img className="" src={src} alt={alt} />
+              </div>
 
-        
+              
+              <P className="text-gray-300/70 text-sm font-elegant text-center" valor={avaliacao}/>
 
+            </div>
+          ))}
+         </section>
+
+         <section className="mt-14 mb-5 w-full ">
+           <article className="w-88 lg:w-250 mx-auto flex flex-col gap-3">
+            <div>
+            <Pborder valor="Quem somos"/>
+            </div>
+           <H2 valor="Sobre o" span="Pelo Zero"/>
+           <Line/>
+           <P span="Pelo Zero " spanClass="text-gold" valor="é o salão de depilação e estética mais procurado e reconhecido da região — referência em qualidade, profissionalismo e atendimento que conquista cada cliente desde a primeira visita."
+            className="text-white/60 text-[10px] md:text-[16px]"
+           />
+           <P valor="Nossa equipe é formada por profissionais altamente especializadas em depilação feminina e design de sobrancelhas com aplicação de henna, com técnica de depilação egípcia apurada e atendimento acolhedor que faz toda a diferença. Aqui cada cliente recebe atenção personalizada do início ao fim."
+            className="text-white/60 text-[10px] md:text-[16px]"
+           />
+           <P valor="O salão Pelo Zero está à disposição dos clientes com um horário marcado pelo WhatsApp."
+            className="text-white/60 text-[10px] md:text-[16px]"
+           />
+           </article>
+         </section>
+         
+         <section className="flex flex-col items-center gap-3 my-6 bg-hero py-6">
+          <Pborder valor="agende seu horario"/>
+          <H2 valor="Pronta para se" span="transformar?"/>
+          <Line/>
+          <P className="text-center text-[12px] md:text-[16px] font-elegant text-white/60 w-72 md:w-96" valor="Entre em contato pelo WhatsApp e agende seu horário.
+          Atendemos em Cruzes e Panelas com todo o carinho que você merece."/>
+          
+          <div className="flex gap-4 mt-4">
+             <Bnt onclick={runZap1} valor="WhatsApp 1" />
+             <Bnt onclick={runZap} valor="WhatsApp 2" />
+          </div>
+          
+         </section>
         </main>
       </>
     )

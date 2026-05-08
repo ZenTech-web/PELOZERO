@@ -36,13 +36,18 @@ const Footer = ({openValue}) => {
             </div>
             
             <div className="w-full mt-3 border-t-2 border-gray-300 text-center text-[10px]">
-               <P 
-               className="text-gray-400 mt-2"
-               valor="&copy; 2026 Pelo Zero - Depilação & Estética"
-               />
-               <P 
-               className="text-gray-400" 
-               valor="Desevolvido por ZenTech"/>
+               
+                 <P 
+                 className="text-gray-400 mt-2"
+                 valor="&copy; 2026 Pelo Zero - Depilação & Estética"
+                 />
+                 
+                 <div className="flex justify-center items-center gap-1 mt-2">
+                 <P 
+                 className="text-gray-400" 
+                 valor="Desenvolvido por"/>
+                <a href="https://zentechbr.com.br/" className="text-gold hover:underline">ZenTech</a>
+               </div>
             </div>
 
            </section>
