@@ -9,11 +9,13 @@ import Line from "../../Components/ Line";
 
 const Main = () => {
 
-   const {openValue} = useOutletContext();
+   const { openValue, refServicos, refPrecos, refSobre, refContato } = useOutletContext();
    const imagem = Data.find((e) => e.Banner).Banner
    const dados = Data.find((e) => e.Service).Service
    const dadosPrices = Data.find((e) => e.Prices).Prices
    const evaluated = Data.find((e) => e.evaluated).evaluated
+   const imgPeloZero = Data.find((e) => e.imgPeloZero).imgPeloZero
+   const imgPeloZeroHorizotal = Data.find((e) => e.imgPeloZeroHorizotal).imgPeloZeroHorizotal
 
    function runZap(){
      const phoneNumber = "5581997203677";
@@ -67,10 +69,10 @@ const Main = () => {
 
         </section>
 
-        <section className="flex flex-col items-center py-8">
+        <section ref={refServicos} className="flex flex-col items-center py-8">
 
            <div className="flex flex-col items-center gap-2.5">
-  
+
              <Pborder valor="o que oferecemos"/>
 
              <H2 valor="Nossos" span="Serviços"/>
@@ -101,10 +103,10 @@ const Main = () => {
              
         </section>
 
-        <section className="flex flex-col items-center py-8">
+        <section ref={refPrecos} className="flex flex-col items-center py-8">
 
            <div className="flex flex-col items-center gap-2.5">
-  
+
              <Pborder valor="Tabela de valores"/>
 
              <H2 valor="Nossos" span="Preços"/>
@@ -188,7 +190,7 @@ const Main = () => {
           ))}
          </section>
 
-         <section className="mt-14 mb-5 w-full ">
+         <section ref={refSobre} className="mt-14 mb-5 w-full ">
            <article className="w-88 lg:w-250 mx-auto flex flex-col gap-3">
             <div>
             <Pborder valor="Quem somos"/>
@@ -207,7 +209,40 @@ const Main = () => {
            </article>
          </section>
          
-         <section className="flex flex-col items-center gap-3 my-6 bg-hero py-6">
+         <section className="flex flex-col items-center gap-3">
+          <Pborder valor="Nossa unidade em panelas"/>
+          <H2 valor="Nosso melhor para" span=" você"/>
+          <Line/>
+
+         <section className="mx-auto my-5 flex flex-wrap gap-6 justify-center">
+          
+           {imgPeloZero.map(({src, alt}, index) => (
+             <div key={index} className="flex flex-wrap border border-gold/40 p-2 bg-hero w-28 md:w-50">
+               
+               <div className="flex gap-0.5 items-center justify-center">
+               <img className="" src={src} alt={alt} />
+               </div>
+
+             </div>
+           ))}
+
+         </section>
+
+         <section className="flex gap-6">
+           {imgPeloZeroHorizotal.map(({src, alt}, index) => (
+             <div key={index} className="flex flex-wrap border border-gold/40 p-2 bg-hero w-42 md:w-80">
+               
+               <div className="flex gap-0.5 items-center justify-center">
+               <img className="" src={src} alt={alt} />
+               </div>
+
+             </div>
+           ))}
+         </section>
+
+         </section>
+
+         <section ref={refContato} className="flex flex-col items-center gap-3 my-6 bg-hero py-6">
           <Pborder valor="agende seu horario"/>
           <H2 valor="Pronta para se" span="transformar?"/>
           <Line/>
@@ -220,6 +255,8 @@ const Main = () => {
           </div>
           
          </section>
+
+
         </main>
       </>
     )

@@ -69,6 +69,21 @@ const Data = [
         {src: Logosimbolo, alt: "Simbolo de estrela gold", avaliacao: "Avaliações dos clientes", numero:"5"},
         {avaliacao: "Dedicação em cada visita", numero:"100%"}
       ]
+    },
+    {
+        imgPeloZero: [
+            {src:"ImgPeloZero/armario.jpeg" , alt:"Armario"},
+            {src:"ImgPeloZero/armarios.jpeg" , alt:"Armarios"},
+            {src:"ImgPeloZero/macas.jpeg" , alt:"Macas"},
+            {src:"ImgPeloZero/piar.jpeg" , alt:"Piar"},
+            
+        ]
+    },
+    {
+        imgPeloZeroHorizotal: [
+            {src:"ImgPeloZero/sala.jpeg" , alt:"Piar"},
+            {src:"ImgPeloZero/peloZero.jpeg" , alt:"Pelo Zero"},
+        ]
     }
 
 ]
