@@ -1,6 +1,5 @@
 import { useOutletContext } from "react-router-dom";
 import Bnt from "../../Components/Bnt"
-import Button from "../../Components/Button"
 import P from "../../Components/P"
 import Pborder from "../../Components/Pborder"
 import Data from "../../Data/Data";
