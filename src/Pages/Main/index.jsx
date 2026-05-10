@@ -9,6 +9,8 @@ import Line from "../../Components/ Line";
 
 const Main = () => {
 
+  
+
    const { openValue, refServicos, refPrecos, refSobre, refContato } = useOutletContext();
    const imagem = Data.find((e) => e.Banner).Banner
    const dados = Data.find((e) => e.Service).Service
@@ -29,6 +31,10 @@ const Main = () => {
      const message = encodeURIComponent("Olá! Gostaria de agendar um horário no Pelo Zero.");
      const url = `https://wa.me/${phoneNumber}?text=${message}`;
      window.open(url, "_blank");
+   }
+
+   function whiteImg(){
+
    }
 
     return (
@@ -217,7 +223,7 @@ const Main = () => {
          <section className="mx-auto my-5 flex flex-wrap gap-6 justify-center">
           
            {imgPeloZero.map(({src, alt}, index) => (
-             <div key={index} className="flex flex-wrap border border-gold/40 p-2 bg-hero w-28 md:w-50">
+             <div key={index} className="flex flex-wrap border border-gold/40 p-2 bg-hero w-28 md:w-50" onClick={whiteImg}>
                
                <div className="flex gap-0.5 items-center justify-center">
                <img className="" src={src} alt={alt} />

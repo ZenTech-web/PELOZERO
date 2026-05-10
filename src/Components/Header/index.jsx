@@ -11,7 +11,7 @@ const Header = ({openValue, setOpenValue, scrollS, scrollP, scrollO, scrollC} ) 
 
     return (
          <>
-        <header className="bg-dark w-full ">
+        <header className="bg-dark w-full fixed top-0 z-[1000]">
             
             <section className="px-6 py-4 flex justify-between items-center max-w-6xl mx-auto">
 
